@@ -90,7 +90,7 @@ function calc() {
   const unit = document.getElementById("unit").value;
   const inputQty = parseInt(document.getElementById("qty").value);
 
-  if (isNaN(buy) || isNaN(sell) || isNaN(inputQty) || inputQty <= 0) {
+  if (isNaN(buy) || isNaN(sell) || isNaN(inputQty) || buy < 0 || sell < 0 || inputQty <= 0) {
     alert("請輸入正確資料");
     return;
   }
