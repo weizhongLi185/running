@@ -111,7 +111,7 @@ function calc() {
   if (type === "etf") taxRate = 0.001;
   if (type === "daytrade") taxRate = 0.0015;
 
-  const tax = Math.round(sellValue * taxRate);
+  const tax = Math.floor(sellValue * taxRate);
   const totalBuyCost = buyCost + buyFee;
   const netSellIncome = sellValue - sellFee - tax;
 
