@@ -113,8 +113,9 @@ function calc() {
 
   const tax = Math.round(sellValue * taxRate);
 
-  const profit = sellValue - buyCost - buyFee - sellFee - tax;
-
+  const profit = sellValue - buyCost - buyFee - sellFee - tax; 
+  const roi = (profit / (buyCost + buyFee)) * 100;
+  
   document.getElementById("result").innerHTML = `
     股數：${qty.toLocaleString()} 股<br><br>
 
@@ -126,6 +127,7 @@ function calc() {
     證交稅：${tax.toLocaleString()} 元<br><br>
 
     <h3>損益：${profit.toLocaleString()} 元</h3>
+    <h3>投報率：${roi.toFixed(2)}%</h3>
   `;
 }
 
